@@ -1,0 +1,16 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <table> 
+    <th><span>id</span></th>
+    <th><span>name</span></th>
+    <th><span>phone</span></th>
+    <tr  *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}" [class.selected]="hero === selectedHero">
+      <td>{{hero.id}}</td>
+     <td>{{hero.name}}</td>
+     <td >{{hero.phone}}</td>
+     <tr>
+  </table>
+  </ul>
+
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
